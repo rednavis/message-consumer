@@ -13,7 +13,7 @@ import lombok.Getter;
 public class ItemDbo {
 
   @Id
-  private UUID id;
+  private String id;
   private String name;
   private int amount;
   private double price;
@@ -22,7 +22,7 @@ public class ItemDbo {
 
   public static ItemDbo from(ItemDto item) {
     return ItemDbo.builder()
-        .id(UUID.randomUUID())
+        .id(UUID.randomUUID().toString())
         .name(item.getName())
         .amount(item.getAmount())
         .description(item.getDescription())

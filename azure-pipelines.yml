@@ -19,4 +19,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     codeCoverageToolOption: JaCoCo
-    codeCoverageClassFilter: '-:com.rednavis.demo.kafka.messageconsumer.MessageConsumerApplication'
+    codeCoverageClassFilter: '-:com.rednavis.demo.kafka.messageconsumer.MessageConsumerApplication,-:com.rednavis.demo.kafka.messageconsumer.dto.ItemDto'

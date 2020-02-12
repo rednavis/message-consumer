@@ -21,8 +21,5 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '**/jacoco.exec'
-    pathToSources: '$(System.DefaultWorkingDirectory)/message-consumer/src/main/java/'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/MyApp/**/site/jacoco'
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    reportDirectory: $(System.DefaultWorkingDirectory)/target/site/jacoco
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/target/site/jacoco/jacoco.xml

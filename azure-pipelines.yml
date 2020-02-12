@@ -18,11 +18,4 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '**/jacoco.exec'
-    pathToSources: '$(System.DefaultWorkingDirectory)/message-consumer/src/main/java/'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/MyApp/**/site/jacoco'
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    codeCoverageToolOption: JaCoCo

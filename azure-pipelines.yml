@@ -19,4 +19,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     codeCoverageToolOption: JaCoCo
-    codeCoverageClassFilter: -:**/*Application.*, -:**/*Dto.*
+    codeCoverageClassFilter: -:*Application.*, -:*Dto.*

@@ -18,8 +18,4 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    reportDirectory: $(System.DefaultWorkingDirectory)/target/site/jacoco
-    summaryFileLocation: $(System.DefaultWorkingDirectory)/target/jacoco.exec
+    codeCoverageToolOption: JaCoCo

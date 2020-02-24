@@ -9,7 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import com.rednavis.demo.kafka.messageconsumer.dto.ItemDto;
+import com.rednavis.demo.kafka.messageconsumer.dto.ItemRQDto;
 import com.rednavis.demo.kafka.messageconsumer.model.ItemDbo;
 
 @DataMongoTest
@@ -26,14 +26,14 @@ class ItemRepositoryIntegrationTest {
 
   @Test
   public void testStorage() {
-    ItemDto itemDto = new ItemDto();
-    itemDto.setAmount(AMOUNT);
-    itemDto.setDescription(DESCRIPTION);
-    itemDto.setName(NAME);
-    itemDto.setPrice(PRICE);
-    itemDto.setPublic(false);
+    ItemRQDto itemRQDto = new ItemRQDto();
+    itemRQDto.setAmount(AMOUNT);
+    itemRQDto.setDescription(DESCRIPTION);
+    itemRQDto.setName(NAME);
+    itemRQDto.setPrice(PRICE);
+    itemRQDto.setPublic(false);
 
-    itemRepository.save(from(itemDto));
+    itemRepository.save(from(itemRQDto));
 
     List<ItemDbo> all = itemRepository.findAll();
     assertThat(all.size()).isEqualTo(1);

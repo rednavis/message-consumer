@@ -3,7 +3,7 @@ package com.rednavis.demo.kafka.messageconsumer.model;
 import java.util.UUID;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import com.rednavis.demo.kafka.messageconsumer.dto.ItemDto;
+import com.rednavis.demo.kafka.messageconsumer.dto.ItemRQDto;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -20,7 +20,7 @@ public class ItemDbo {
   private String description;
   private boolean isPublic;
 
-  public static ItemDbo from(ItemDto item) {
+  public static ItemDbo from(ItemRQDto item) {
     return ItemDbo.builder()
         .id(UUID.randomUUID().toString())
         .name(item.getName())

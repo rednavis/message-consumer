@@ -3,7 +3,7 @@ package com.rednavis.demo.kafka.messageconsumer.model;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
-import com.rednavis.demo.kafka.messageconsumer.dto.ItemDto;
+import com.rednavis.demo.kafka.messageconsumer.dto.ItemRQDto;
 
 class ItemDboTest {
 
@@ -14,14 +14,14 @@ class ItemDboTest {
 
   @Test
   void testFrom() {
-    ItemDto itemDto = new ItemDto();
-    itemDto.setAmount(AMOUNT);
-    itemDto.setDescription(DESCRIPTION);
-    itemDto.setName(NAME);
-    itemDto.setPrice(PRICE);
-    itemDto.setPublic(false);
+    ItemRQDto itemRQDto = new ItemRQDto();
+    itemRQDto.setAmount(AMOUNT);
+    itemRQDto.setDescription(DESCRIPTION);
+    itemRQDto.setName(NAME);
+    itemRQDto.setPrice(PRICE);
+    itemRQDto.setPublic(false);
 
-    ItemDbo from = ItemDbo.from(itemDto);
+    ItemDbo from = ItemDbo.from(itemRQDto);
 
     assertThat(from.getId()).isNotNull();
     assertThat(from.getAmount()).isEqualTo(AMOUNT);
